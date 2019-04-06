@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(cList|length) %}
+            <tr>
+                <td>{{cList[i]["symbol"]}}</td>
+                <td>{{cList[i]["name"]}}</td>
+                <td>{{cList[i]["quantity"]}}</td>
+                <td>{{cList[i]["price"]}}</td>
+                <td>{{cList[i]["total"]}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{Cash}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="4"></td>
+            <td><b>{{Total}}<b></td>
+        </tfoot>
+    </table>
+{% endblock %}
