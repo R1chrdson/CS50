@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <form action="/score" method="post">
+        <input name="string1" type="text"></input>
+        <br>
+        <input name="string2" type="text"></input>
+        <br>
+        <button type="submit">Score</button>
+    </form>
+
+    <style>
+        input, button: {
+            margin: 5px;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<table class="table table-sm">
+    <tbody>
+        {% for s, operations, description in operations %}
+            <tr>
+                <th>
+                    {% if operations == None %}
+                        {{ s | safe }}
+                    {% else %}
+                        {{ s[0] }}<span class="{{ operations }}">{{ s[1] }}</span>{{ s[2] }}
+                        {% if description != None %}
+                            <span class="badge {{ operations }} text-dark">
+                                {{ description }}
+                            </span>
+                        {% endif %}
+                    {% endif %}
+                </th>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
