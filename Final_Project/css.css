@@ -1,0 +1,64 @@
+* {
+  touch-action: manipulation;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.container {
+  /*  height: 351px;*/
+  position: relative;
+  top: 100px; 
+  left: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder {
+ align-self: auto;
+ margin: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  /*width: 381px;*/
+}
+
+.content {
+  position: relative;
+  height: 2.3em;
+  width: 2.3em;
+}
+
+.cell {
+  border: 1px solid gray;
+  padding: 0;
+}
+
+.cell_busy {
+  border-color: rgb(204, 204, 204)
+}
+
+.marker {
+  position: absolute;
+  font-size: 13px;
+  z-index: 1;
+}
+
+.marker_row {
+  left: -2.5em;
+  width: 2em;
+  text-align: right;
+  top: 1em;
+  height: 1em;
+}
+
+.marker_col {
+  top: -1.5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,744 @@
+<html lang="en">
+<head>
+  <title>Battleship game</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <div class="container">
+    <div class="leftsquare">
+        <div class="placeholder">
+          <table class="battlefield">
+              <tbody>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="0">
+                        <div class="marker marker_row">1</div>
+                        <div class="marker marker_col">A</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="1">
+                          <div class="marker marker_col">B</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="2">
+                          <div class="marker marker_col">C</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="3">
+                        <div class="marker marker_col">D</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="4">
+                        <div class="marker marker_col">E</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="5">
+                        <div class="marker marker_col">F</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="6">
+                        <div class="marker marker_col">G</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="7">
+                        <div class="marker marker_col">H</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="8">
+                        <div class="marker marker_col">I</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="0" pos-y="9">
+                        <div class="marker marker_col">J</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="0">
+                        <div class="marker marker_row">2</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="1" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="0">
+                        <div class="marker marker_row">3</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="2" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="0">
+                        <div class="marker marker_row">4</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="3" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="0">
+                        <div class="marker marker_row">5</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="4" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="0">
+                        <div class="marker marker_row">6</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="5" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="0">
+                        <div class="marker marker_row">7</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="6" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="0">
+                        <div class="marker marker_row">8</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="7" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="0">
+                        <div class="marker marker_row">9</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="8" pos-y="9"></div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="0">
+                        <div class="marker marker_row">10</div>
+                      </div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="1"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="2"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="3"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="4"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="5"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="6"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="7"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="8"></div>
+                    </td>
+                    <td class="cell c_empty">
+                      <div class="content" pos-x="9" pos-y="9"></div>
+                    </td>
+                  </tr>
+              </tbody>
+          </table>
+        </div> 
+      </div>
+      <div class="rightsquare">
+        <div class="placeholder">
+          <table class="battlefield">
+            <tbody>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="0">
+                    <div class="marker marker_row">1</div>
+                    <div class="marker marker_col">A</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="1">
+                      <div class="marker marker_col">B</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="2">
+                      <div class="marker marker_col">C</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="3">
+                    <div class="marker marker_col">D</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="4">
+                    <div class="marker marker_col">E</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="5">
+                    <div class="marker marker_col">F</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="6">
+                    <div class="marker marker_col">G</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="7">
+                    <div class="marker marker_col">H</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="8">
+                    <div class="marker marker_col">I</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="0" pos-y="9">
+                    <div class="marker marker_col">J</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="0">
+                    <div class="marker marker_row">2</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="1" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="0">
+                    <div class="marker marker_row">3</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="2" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="0">
+                    <div class="marker marker_row">4</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="3" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="0">
+                    <div class="marker marker_row">5</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="4" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="0">
+                    <div class="marker marker_row">6</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="5" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="0">
+                    <div class="marker marker_row">7</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="6" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="0">
+                    <div class="marker marker_row">8</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="7" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="0">
+                    <div class="marker marker_row">9</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="8" pos-y="9"></div>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="0">
+                    <div class="marker marker_row">10</div>
+                  </div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="1"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="2"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="3"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="4"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="5"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="6"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="7"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="8"></div>
+                </td>
+                <td class="cell c_empty">
+                  <div class="content" pos-x="9" pos-y="9"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
