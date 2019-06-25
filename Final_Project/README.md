@@ -5,5 +5,5 @@
 
 - HTML
 - CSS
-- JavaScript
+- JavaScript (jQuery, jQuery UI)
 ---
