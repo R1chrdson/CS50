@@ -1,7 +1,6 @@
 # Final project
-## *TODO*
+## The battleship game with intelligent bot on Web
 ---
-### It should be a bot for battleship game based on Web
 ##### Technology stack:
 
 - HTML
