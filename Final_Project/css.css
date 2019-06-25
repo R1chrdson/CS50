@@ -5,26 +5,36 @@
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 .container {
-  /*  height: 351px;*/
   position: relative;
-  top: 100px; 
-  left: 10px;
+  top: 150px; 
   display: flex;
   justify-content: center;
+}
+
+.rightsquare, .leftsquare {
+  display: flex;
 }
 
 .placeholder {
  align-self: auto;
  margin: 30px;
+ display: flex;
+ align-items: center;
+}
+
+.leftsquare .placeholder {
+  margin-right: 20px;
 }
 
 table {
   border-collapse: collapse;
   table-layout: fixed;
-  /*width: 381px;*/
 }
 
 .content {
@@ -33,19 +43,90 @@ table {
   width: 2.3em;
 }
 
-.cell {
-  border: 1px solid gray;
-  padding: 0;
+.rightsquare .battlefield:not(.wait) .cell:not(.c_hit):not(.marked) .content:hover {
+  content: "";
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid #7676e6;
 }
 
-.cell_busy {
-  border-color: rgb(204, 204, 204)
+.c_miss.auto.marked:hover {
+  cursor: pointer;
+  z-index: 2;
+  margin-top: -1px;
+  margin-left: -2px;
+}
+
+.rightsquare .cell:not(.c_hit) .ship:not(.defeat):hover {
+  margin: -4px;
+}
+
+.instruction {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -20px;
+}
+
+.cell {
+  border: 0.05em solid #b4b4ff;
+  padding: 0;
+  align-items: center;
+    box-sizing: border-box;
+}
+
+.last {
+  background: #f7f7de;
+}
+
+.c_miss.marked .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height:0.5em;
+  width:0.5em;
+  background:rgb(0, 0, 255);
+  border-radius:50%;
+  margin-top:-0.1em;
+  margin-left:-0.25em;
+}
+
+.c_hit .dot:after,
+.c_hit .dot:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: red;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c_hit .dot:before {
+  left: 47.5%;
+  width: 0.1em;
+  top: -21%;
+  height: 142%;
+}
+
+.c_hit .dot:after {
+  top: 47.5%;
+  height: 0.1em;
+  left: -21%;
+  width: 142%;
+}
+
+.marked.auto .dot {
+  opacity: 0.2;
+}
+.c_busy {
+  border-color:rgba(0,0,255,.1)
 }
 
 .marker {
   position: absolute;
   font-size: 13px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .marker_row {
@@ -57,8 +138,256 @@ table {
 }
 
 .marker_col {
-  top: -1.5em;
+  top: -1.7em;
   left: 0;
   width: 100%;
   text-align: center;
+}
+
+.wait {
+  opacity: 0.4;
+}
+
+.none {
+  display:none;
+}
+
+.notifications-container {
+  display: flex;
+  justify-content: center;
+}
+
+.notification {
+  z-index: 1;
+  position: absolute;
+  top: 25px;
+  height: 75px;
+  line-height: 75px;
+  width: 500px;
+  background-color: #DFF2BF;
+  text-align: center;
+  border-radius: 10px;
+  border-bottom: 3px solid green;
+}
+
+.info {
+  background-color: #aad5dd;
+  border-bottom: 3px solid  #328b9b;
+}
+
+.warning {
+  border-bottom: 3px solid red;
+  background-color: rgb(242, 191, 191);
+}
+
+.notification-message {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  font-size: 25px;
+  letter-spacing: -1px;
+  color: #444;
+  font-weight: 100;
+}
+
+.start {
+  z-index: 1;
+  position: absolute;
+  margin: -1em 1em;
+}
+
+.button {
+  padding :0.7em 1.4em;
+  margin: 1em 0.3em 0.3em 0em;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:'Roboto',sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight:400;
+  color: #FFFFFF;
+  background-color: #3369ff;
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align: center;
+  width: 6em;
+}
+.button:active {
+  transform: scale(1.1, 1.1);
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.play {
+  background-color: rgb(51, 189, 85);
+}
+
+.play:hover{
+  background-color: rgb(109, 199, 132);
+}
+
+.replay {
+  position: absolute;
+  line-height: 20px;
+  left: 200px;
+  top: 300px;
+}
+
+.replay:hover {
+  background-color: #658af0;
+}
+
+.ship {
+  border: 2px solid #00f;
+  background: rgba(0,0,255,.05);
+  margin: -2px;
+  position: absolute !important;
+}
+
+.leftsquare .ship {
+  z-index: 1;
+}
+
+.done {
+  border-color:rgba(0,0,255,.1)
+}
+
+.defeat {
+  border-color: red;
+}
+
+.ui-draggable {
+  cursor: grab;
+}
+
+.ui-draggable-dragging {
+  cursor: grabbing;
+}
+
+.ui-draggable-hover {
+  border-color: #40BF44;
+}
+
+.ui-onclick-error {
+  border-color: red;
+  background:rgba(64,191,68,.05)
+}
+
+.settings {
+  display: inline-block;
+  position: absolute;
+  width: 350px;
+  margin: -5px;
+  margin-top: 430px;
+}
+
+.settings div {
+  padding: 4px;
+  height: 20px;
+}
+
+.settings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+img {
+  margin-left: 2px;
+  height: 1em;
+  width: 1em;
+}
+
+fieldset {
+  border: 2px solid black;
+  padding: 10px;
+  height: 130px;
+}
+
+legend {
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+
+#randomise-button, #reset-button, #mark-checkbox, #delay-checkbox, #ships-checkbox{
+  display: flex; 
+  align-items: center;
+  margin-right: 10px !important;
+  filter: invert(8%) sepia(100%) saturate(155) hue-rotate(248deg) brightness(94%) contrast(141%);
+}
+
+#randomise-button:not(.wait):hover, #reset-button:not(.wait):hover {
+  font-size: 1.1em;
+  cursor: pointer;
+	filter: invert(.5) sepia(1) saturate(80) hue-rotate(120deg);
+}
+
+#mark-checkbox[check="1"]:not(.wait),
+#delay-checkbox[check="1"]:not(.wait),
+#ships-checkbox[check="1"]:not(.wait)
+ {
+  cursor: pointer;
+  filter: invert(.5) sepia(1) saturate(80) hue-rotate(120deg);
+}
+
+#mark-checkbox:not(.wait):hover,
+#delay-checkbox:not(.wait):hover,
+#ships-checkbox:not(.wait):hover {
+  font-size: 1.1em;
+}
+
+.base-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-top: -75.6px;
+}
+
+.line {
+  display: flex;
+  margin-top: 37.8px;
+}
+
+.base {
+  margin-right: 37.8px;
+  border: 1px dotted #b2b2b9;
+}
+
+.rightsquare {
+  flex-direction: row-reverse;
+}
+
+.field-stats {
+  margin-top: 20px;
+}
+
+.left .ships {
+  justify-content: flex-end;
+}
+
+.field-stats.right {
+  margin-left: -10px;
+}
+
+.ships {
+  display: flex;
+  margin-top: 5px;
+}
+
+.ships .ship-holder{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.ship-part {
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
+  background: blue;
+  opacity: 0.5;
+}
+
+.red * {
+  background: red;
 }
